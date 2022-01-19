@@ -1,2 +1,3 @@
-# Python_Class_exercises
+# Python Intermediate Course
 files from both notebook and pc
+exercises
