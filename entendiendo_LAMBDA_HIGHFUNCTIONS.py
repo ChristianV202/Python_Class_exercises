@@ -76,18 +76,18 @@ DATA = [
 
 
 def run():
-    #List comprehension
-    all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
-    #De la variable worker, guardar lo que este dentro de name, recorriendo la lista DATA, si el lenguaje de ese worker es igual a python
+    #Usar ahora filter y map
+    #all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
+    #all_Platzi_workers = [worker['name'] for worker in DATA if worker['organization'] == 'Platzi']
+    all_python_devs = list(filter(lambda name: name['language'] == 'python', DATA)) #lambda va a recorrer DATA, y a cada diccionario que encuentra, lo guarda en name. Despues busca la keyword 'language' dentro de cada name/diccionario y lo compara con mi condicion 'python'
+
+
     
-    all_Platzi_workers = [worker['name'] for worker in DATA if worker['organization'] == 'Platzi']
-    
-    #High order functions
     adults = list(filter(lambda worker: worker['age'] > 18, DATA))
-    adults = list(map(lambda worker: worker['name'], adults)) #Map agrupa
+    adults = list(map(lambda worker: worker['name'], adults))
     old_people = list(map(lambda worker: worker | {'old': worker ['age'] > 70}, DATA))
 
-    for worker in old_people:
+    for worker in all_python_devs:
         print(worker)
 
 
