@@ -83,12 +83,12 @@ def run():
 
 
     
-    adults = list(filter(lambda worker: worker['age'] > 18, DATA))
-    adults = list(map(lambda worker: worker['name'], adults))
-    old_people = list(map(lambda worker: worker | {'old': worker ['age'] > 70}, DATA))
+    #adults = list(filter(lambda worker: worker['age'] > 18, DATA))
+    #adults = list(map(lambda worker: worker['name'], adults))
+    #old_people = list(map(lambda worker: worker | {'old': worker ['age'] > 70}, DATA))
 
-    for worker in all_python_devs:
-        print(worker)
+    for dictionary_inside_variable in all_python_devs:
+        print(dictionary_inside_variable['name'])   #La variable con el diccionario adentro recorre all_python_devs e imprime el valor de la key 'name' de cada uno de esos diccionarios que encuentra
 
 
 if __name__ == '__main__':
