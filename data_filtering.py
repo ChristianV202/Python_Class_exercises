@@ -1,7 +1,6 @@
-#Tenemos constantes en Python
 from unicodedata import name
 
-DATA = [
+DATA = [                                        #Tenemos constantes en Python
     {
         'name': 'Facundo',
         'age': 72,
@@ -78,7 +77,7 @@ DATA = [
 def run():
     #List comprehension
     all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
-    #De la variable worker, guardar lo que este dentro de name, recorriendo la lista DATA, si el lenguaje de ese worker es igual a python
+    #De lo que contenga la variable worker al recorrer DATA, guardar lo que este dentro de name, recorriendo la lista DATA, si el lenguaje de ese worker es igual a python
     
     all_Platzi_workers = [worker['name'] for worker in DATA if worker['organization'] == 'Platzi']
     
